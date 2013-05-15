@@ -48,11 +48,11 @@
            2 line 14 col 2 'Pr'&x'82'&'nom : '.
            2 a-prenom pic x(30) from prenom.
            2 line 16 col 2 'Date d''obtention du permis : '.
-           2 a-permis pic 9(4) from datepermisN(1:4).
+           2 a-permis pic 9(2) from datepermisN(7:2).
            2 '/'.
            2 a-permis2 pic 9(2) from datepermisN(5:2).
            2 '/'.
-           2 a-permis3 pic 9(2) from datepermisN(7:2).
+           2 a-permis3 pic 9(4) from datepermisN(1:4).
 
 
 

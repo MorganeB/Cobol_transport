@@ -132,11 +132,11 @@
            2 line ligne col 10.
            2 s-numchauffeuraff pic 9(4) from numchauffeuraff.
            2 line ligne col 29.
-           2 s-datedebut1 pic 9(4) from datedebut(1:4).
+           2 s-datedebut1 pic 9(2) from datedebut(7:2).
            2 '/'.
-           2 s-datedebut2 pic 99 from datedebut(5:2).
+           2 s-datedebut2 pic 9(2) from datedebut(5:2).
            2 '/'.
-           2 s-datedebut3 pic 99 from datedebut(7:2).
+           2 s-datedebut3 pic 9999 from datedebut(1:4).
 
 
        1 a-plg-next.

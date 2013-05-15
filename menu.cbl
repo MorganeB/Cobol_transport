@@ -16,11 +16,10 @@
            2 line 8 col 10 '2 Gestion des affectations'.
            2 line 9 col 10 '3 Disponibilit'&x'82'&'s'.
            2 line 10 col 10 '4 R'&x'82'&'capitulatif'.
-           2 line 11 col 10 '5 Quitter'.
 
        1 s-plg-choix.
-           2 line 12 col 13 'Choix ? '.
-           2 s-choix line 12 col 22 pic z to choix required.
+           2 line 13 col 13 'Choix ? '.
+           2 s-choix line 13 col 22 pic z to choix required.
 
        *>>>>>>>>>>>>>>>>>>>> Menu 1 : chauffeurs >>>>>>>>>>>>>>
 

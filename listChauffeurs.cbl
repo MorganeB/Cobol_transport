@@ -23,7 +23,7 @@
        1 pic x value 'n'.
        88 fin-lire value 'o' false 'n'.
 
-       1 i pic 99 value 7. *> indice de ligne
+       1 i pic 99 value 9. *> indice de ligne
        1 nextPage pic x.
 
 
@@ -36,21 +36,27 @@
            2 blank screen.
 
        1 a-plg-titre.
-           2 line 5 col 4 'La liste des chauffeurs (suite) '.
+           2 line 5 col 4 'Liste des chauffeurs (suite) '.
 
        1 a-plg-nextPage.
            2 line 24 'Appuyez sur une touche pour afficher la suite'.
            2 s-nextPage line 25 col 80 pic x to nextPage auto secure.
 
+       1 a-plg-colonnes.
+           2 line 7 col 1 'Num'&x'82'&'ro'.
+           2 line 7 col 15 'Nom'.
+           2 line 7 col 35 'Pr'&x'82'&'nom'.
+           2 line 7 col 60 'Date permis'.
+
        1 a-plg-res.
            2 s-num line i col 2 pic 9(4) from numchaufN.
-           2 a-nom line i col 8 pic x(30) from nomN.
-           2 a-prenom line i col 30 pic x(30) from prenomN.
-           2 a-permis line i col 55 pic 9(4) from datepermisN(1:4).
+           2 a-nom line i col 15 pic x(30) from nomN.
+           2 a-prenom line i col 35 pic x(30) from prenomN.
+           2 a-permis line i col 60 pic 9(2) from datepermisN(7:2).
            2 '/'.
-           2 a-permis2 line i col 60 pic 9(2) from datepermisN(5:2).
+           2 a-permis2 line i col 63 pic 9(2) from datepermisN(5:2).
            2 '/'.
-           2 a-permis3 line i col 63 pic 9(2) from datepermisN(7:2).
+           2 a-permis3 line i col 66 pic 9(4) from datepermisN(1:4).
 
 
        1 a-plg-nonRes.
@@ -79,14 +85,16 @@
            goback.
 
          mod-affichage.
+           display a-plg-colonnes
            display a-plg-res
            compute i = i + 1
            if (i > 20) then
-               compute i = 7
+               compute i = 9
                display a-plg-nextPage
                accept s-nextPage
                display a-plg-effacerEcran
                display a-plg-titre
+               display a-plg-colonnes
                display a-plg-res
            end-if
        .
